@@ -5,6 +5,7 @@ body{
 
 .page-container {
     background: url(sukunadomain.png) center center fixed;
+    background-color: rgba(255, 255, 255, 0.9);
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -34,19 +35,20 @@ body{
     background-color: transparent;
     border-bottom: none;
     padding: 25px;
-    border-radius: 10px; /* You can adjust the value to change the degree of rounding */
+    border-radius: 10px;
+    display: flex; /* Add flexbox */
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
 }
-
 
 .card .card-header h5 {
     margin-bottom: 0;
-    color: #222;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 600;
     display: inline-block;
-    margin-right: 10px;
     line-height: 1.4;
-    text-align: center; /* Center-align the text */
+    text-align: center;
 }
 
 
@@ -88,6 +90,7 @@ body{
 
 .f-w-600 {
     font-weight: 600;
+    color: white
 }
 
 .m-b-10 {
@@ -107,7 +110,7 @@ body{
 }
 
 .text-muted {
-    color: #919aa3!important;
+    color: #ffffff!important;
 }
 
 .user-card .card-block .activity-leval li.active {
@@ -158,9 +161,16 @@ body{
     padding: 20px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
 .user-card .card-block .user-social-link i {
     font-size: 30px;
     display: inline-block; /* Make the icons display inline */
+    width:100%;
     margin-right: 10px; /* Adjust margin as needed for spacing between icons */
 }
 
@@ -173,7 +183,7 @@ body{
 }
 
 .text-dribbble {
-    color: #EC4A89;
+    color: #ff0062;
 }
 
 .user-social-link {
