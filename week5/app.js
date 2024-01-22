@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// snap scrolling
 document.addEventListener('DOMContentLoaded', () => {
 
     const sections = gsap.utils.toArray('section');
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-// first page transition
 document.addEventListener('DOMContentLoaded', () => {
 
     const sections = document.querySelectorAll('section');
