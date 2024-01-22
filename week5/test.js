@@ -32,8 +32,7 @@ function generateSocialIcons() {
       iconLink.classList.add("fa", `fa-${platform}`);
       iconLink.style.fontSize = "48px";
       iconLink.style.color = "black";
-      // Add spacing using margin
-      iconLink.style.marginRight = "10px"; // Adjust spacing as needed
+      iconLink.style.marginRight = "10px";
       iconsContainer.appendChild(iconLink);
     }
   }  
