@@ -95,14 +95,50 @@
     </section>
 
     <section>
-      <div class="container3">
-        <div class="content-horizontal2"></div>
-        <div class="content-medium3"></div>
-        <div class="content-medium3a"></div>
-        <div class="content-smallpage3"></div>
-        <div class="content-horizontal3"></div> 
-        <div class="content-horizontal3a"></div>
-      </div>
+    <div class="container3">
+      <h2>Contact Me</h2>
+      <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text"
+          name="name"
+          id="name"
+          required>
+
+        <label for="email">Email:</label>
+        <input 
+          type="email"
+          name="email"
+          id="email"
+          required>
+          
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+
+      <?php
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = trim($_POST["name"]);
+        $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["message"]);
+
+        // Validate inputs with functions for better organization
+        $isValid = validateFormInputs($name, $email, $message);
+
+        if ($isValid) {
+          // Process the form submission: handle data as needed, e.g., send email
+          // For demo, simulate success message
+          echo "<p class='success'>Thank you for contacting me, $name! I will get back to you shortly.</p>";
+        } else {
+          echo "<p class='error'>Please fill in all required fields.</p>";
+        }
+      }
+
+      function validateFormInputs($name, $email, $message) {
+        return !empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL);
+      }
+      ?>
+    </div>
     </section>
   </div>
 
