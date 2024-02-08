@@ -191,12 +191,6 @@
           ?>
           
           <?php
-          
-          //$servername = "localhost";
-          //$username = "root";
-          //$password = "Qaj8-meb";
-          //$dbname = "myDB";
-
           $servername = "localhost";
           $username = "webprogss221";
           $password = "=latHen97";
