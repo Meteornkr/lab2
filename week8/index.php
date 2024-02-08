@@ -203,8 +203,8 @@
             die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = "INSERT INTO jbvilleza_myguests (name, email, website, comment, gender, reg_date)
-          VALUES ('$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
+          $sql = "INSERT INTO jbvilleza_myguests (`id`, `name`, `email`, `website`, `comment`, `gender`, `reg_date`)
+          VALUES ('$id', '$name', '$email', '$website', '$comment', '$gender', '$reg_date')";
 
           if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
